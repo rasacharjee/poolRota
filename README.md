@@ -1,0 +1,19 @@
+# poolRota
+Cab Sharing app of Rotaract Chandigarh Himalayan
+
+
+
+
+Pull requests accepted on the develop branch created
+
+While putting a pull request follow the below guidelines
+
+PS: Mention the problem statement
+PS link: Mention the issue link
+Solution proposed:
+                            Usages: Mention the usages in the files in the project
+                             Modified: Mention the modifications/ modified file names
+                            Deletion: If any files are deleted.
+
+Note: Create or mark any issues you find in the project.
+Note: Always push your changes in your repo's different branch other than master and then do modifications to ensure safety of the code
