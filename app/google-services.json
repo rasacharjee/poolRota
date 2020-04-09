@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "421299274860-mb0a0kd63nb4qfr8sj4mbm482lb04o4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamecodeschool.rotapool",
+            "certificate_hash": "82888b6fdf2bbc88ae9ecfa50f9d574b68504250"
+          }
+        },
+        {
           "client_id": "421299274860-aj4m71s7v9pbersigh2d0dqub2822rc2.apps.googleusercontent.com",
           "client_type": 3
         }

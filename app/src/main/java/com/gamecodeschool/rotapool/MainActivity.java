@@ -15,12 +15,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailId, password;
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
+    DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +36,13 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.editText2);
         btnSignUp = findViewById(R.id.button2);
         tvSignIn = findViewById(R.id.textView);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailId.getText().toString();
+                final String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
                 if (email.isEmpty()) {
                     emailId.setError("Please enter email id");
@@ -52,7 +59,13 @@ public class MainActivity extends AppCompatActivity {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(MainActivity.this, "SignUp Unsuccessful, Please Try Again", Toast.LENGTH_SHORT);
                             } else {
-                                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                                com.gamecodeschool.rotapool.User info = new com.gamecodeschool.rotapool.User(email);
+                                FirebaseDatabase.getInstance().getReference("Users").child(mFirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                                    }
+                                });
                             }
                         }
                     });
