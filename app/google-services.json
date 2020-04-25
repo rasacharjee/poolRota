@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "421299274860",
+    "firebase_url": "https://poolrota-7f0d9.firebaseio.com",
+    "project_id": "poolrota-7f0d9",
+    "storage_bucket": "poolrota-7f0d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421299274860:android:bcf16e4f694aa513368449",
+        "android_client_info": {
+          "package_name": "com.gamecodeschool.rotapool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421299274860-mb0a0kd63nb4qfr8sj4mbm482lb04o4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamecodeschool.rotapool",
+            "certificate_hash": "82888b6fdf2bbc88ae9ecfa50f9d574b68504250"
+          }
+        },
+        {
+          "client_id": "421299274860-aj4m71s7v9pbersigh2d0dqub2822rc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUunyz316asmMn6zxhyRvLI0VXVZxzNY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421299274860-aj4m71s7v9pbersigh2d0dqub2822rc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
